@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Systems</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+    <style>
+        /* General Styles */
+        html, body {
+            height: 100%; /* Ensure the body takes the full height */
+            margin: 0; /* Remove default margin */
+            font-family: Arial, sans-serif; /* Set a default font */
+        }
+
+        body {
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            background-color: #f4f4f4; /* Light background color */
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text color */
+            padding: 15px 0; /* Padding for spacing */
+            text-align: center; /* Center align text */
+            border-radius: 8px; /* Rounded corners */
+            margin-bottom: 5px; /* Space below the header */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+        }
+
+        /* Navigation Bar Styles */
+        .navtop {
+            background-color: #4CAF50; /* Blue background for the navigation bar */
+            border-radius: 8px; /* Rounded corners */
+            margin-bottom: 20px; /* Space below the navigation bar */
+            width: 100%; /* Make nav occupy full width */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+        }
+
+        .navtop ul {
+            list-style-type: none; /* Remove bullet points */
+            padding: 0; /* Remove padding */
+            margin: 0; /* Remove margin */
+            display: flex; /* Use flexbox to align items horizontally */
+            justify-content: center; /* Center the navigation items */
+        }
+
+        .navtop li {
+            margin: 0 20px; /* Add space between the links */
+        }
+
+        .navtop a {
+            display: block; /* Make the links block elements */
+            color: white; /* White text color */
+            text-decoration: none; /* Remove underline */
+            padding: 15px 25px; /* Padding for better spacing */
+            border-radius: 5px; /* Rounded corners for links */
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+        }
+
+        .navtop a:hover {
+            background-color: #0056b3; /* Darker blue background on hover */
+            transform: scale(1.05); /* Slightly enlarge the link on hover */
+        }
+
+        /* Container Styles */
+        .container {
+            background-color: #4CAF50;/* White background for the container */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            margin: 20px; /* Space around the container */
+            padding: 20px; /* Padding inside the container */
+        }
+
+        /* Main Content Styles */
+        h1 {
+            margin: 20px; /* Add margin for spacing */
+            font-size: 28px; /* Adjust font size */
+            text-align: center; /* Center align the heading */
+        }
+
+        p {
+            margin: 20px; /* Add margin for spacing */
+            font-size: 16px; /* Adjust font size */
+            line-height: 1.5; /* Improve readability */
+        }
+
+        ul, ol {
+            margin: 20px; /* Add margin for spacing */
+            padding-left: 40px; /* Indent lists */
+        }
+  /* Footer */
+  footer {
+            text-align: center;
+            margin-top: 20px;
+            color:#666;
+            padding: 10px;
+            background-color: #4CAF50;
+            border-radius: 5px;
+        }
+        footer img {
+            margin: 0 5px; /* Add margin to the image for spacing */
+            vertical-align: middle; /* Align image with text */
+        }
+    </style>
+</head>
+<body>
+    <header> Number Systems</header>
+    
+    <div class="navtop">
+        <ul>
+            <li><a href="Index.html ">Home</a></li>
+            <li><a href="Calculator.html">Calculator</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h1>Introduction to Number Systems</h1>
+        <p>Number systems serve as the foundation of mathematical expressions, enabling efficient representation and manipulation of numerical values. With various number systems in use, including binary, decimal, hexadecimal, and octal, converting between these bases is crucial in computing, programming, and scientific applications. This comprehensive guide provides step-by-step instructions on converting numbers between different bases, covering:</p>
+    </div>
+    <div class="container">
+        <ul>
+            <li>Binary to Decimal: Calculate powers of 2.</li> 
+            <li>Decimal to Binary: Divide by 2 and record remainders.</li>
+        </ul> 
+        <ol>
+            <li>1010 (binary) = 12^3 + 02^2 + 12^1 + 02^0 = 10 (decimal)</li>
+            <li>10 (decimal) = 1010 (binary)</li>
+        </ol>
+    </div>
+    
+    <div class="container">
+        <ul>
+            <li>Octal to Decimal: Calculate powers of 8.</li> 
+            <li>Decimal to Octal: Divide by 8 and record remainders.</li>
+        </ul> 
+        <ol>
+            <li>29 (decimal) = 35 (octal)</li>
+            <li>12 (octal) = 18^1 + 28^0 = 10 (decimal)</li>
+        </ol>
+    </div>
+    
+    <div class="container">
+        <ul>
+            <li>Hexadecimal to Decimal: Calculate powers of 16.</li> 
+            <li>Decimal to Hexadecimal: Divide by 16 and record remainders.</li>
+        </ul> 
+        <ol>
+            <li>1A (hexadecimal) = 116^1 + 1016^0 = 26 (decimal)</li>
+            <li>255 (decimal) = FF (hexadecimal)</li>
+        </ol>
+    </div>
+    
+    <footer>
+        <img src="kianne.jpg" alt="Logo" style="width: 50px; height: auto;">
+        <p>&copy; 2024 Number System Converter. Created By Ortega.</p>
+    </footer>
+</body>
+</html>

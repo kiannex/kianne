@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number System Converter</title>
+  
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+  }
+
+  .navtop {
+    background-color: #4CAF50;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .navtop ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navtop li {
+    margin: 0 20px;
+  }
+
+  .navtop a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  .navtop a:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+
+  .container {
+    background: #4CAF50;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  label {
+    font-weight: bold;
+    text-align: left;
+  }
+
+  input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+    /* Footer */
+    footer {
+           background-color: #4CAF50;
+            text-align: center;
+            margin-top: 20px;
+            color: black;
+            padding: 10px;
+            background-color: #4CAF50;
+            border-radius: 5px;
+        }
+
+  footer img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 5px;
+  }
+</style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Number System Converter</h1>
+  </header>
+
+  <div class="navtop">
+    <ul>
+      <li><a href="Index.html">Home</a></li>
+      <li><a href="Calculator.html">Calculator</a></li>
+      <li><a href="About.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  
+  <div class="container">
+    <h1>Number System Conversion Calculator</h1>
+    <form id="conversion-form">
+      <label for="decimal">Decimal:</label>
+      <input type="text" id="decimal" placeholder="Enter Decimal Value" oninput="convertFromDecimal()">
+      
+      <label for="binary">Binary:</label>
+      <input type="text" id="binary" placeholder="Enter Binary Value" oninput="convertFromBinary()">
+      
+      <label for="octal">Octal:</label>
+      <input type="text" id="octal" placeholder="Enter Octal Value" oninput="convertFromOctal()">
+      
+      <label for="hexadecimal">Hexadecimal:</label>
+      <input type="text" id="hexadecimal" placeholder="Enter Hexadecimal Value" oninput="convertFromHexadecimal()">
+    </form>
+  </div>
+
+<script>
+function convertFromDecimal() {
+  const decimal = document.getElementById("decimal").value;
+  if (decimal === "") return clearFields();
+
+  document.getElementById("binary").value = parseInt(decimal, 10).toString(2);
+  document.getElementById("octal").value = parseInt(decimal, 10).toString(8);
+  document.getElementById("hexadecimal").value = parseInt(decimal, 10).toString(16).toUpperCase();
+}
+
+function convertFromBinary() {
+  const binary = document.getElementById("binary").value;
+  if (binary === "" || !/^[01]+$/.test(binary)) return clearFields();
+
+  const decimal = parseInt(binary, 2);
+  document.getElementById("decimal").value = decimal;
+  document.getElementById("octal").value = decimal.toString(8);
+  document.getElementById("hexadecimal").value = decimal.toString(16).toUpperCase();
+}
+
+function convertFromOctal() {
+  const octal = document.getElementById("octal").value;
+  if (octal === "" || !/^[0-7]+$/.test(octal)) return clearFields();
+
+  const decimal = parseInt(octal, 8);
+  document.getElementById("decimal").value = decimal;
+  document.getElementById("binary").value = decimal.toString(2);
+  document.getElementById("hexadecimal").value = decimal.toString(16).toUpperCase();
+}
+
+function convertFromHexadecimal() {
+  const hexadecimal = document.getElementById("hexadecimal").value;
+  if (hexadecimal === "" || !/^[0-9A-Fa-f]+$/.test(hexadecimal)) return clearFields();
+
+  const decimal = parseInt(hexadecimal, 16);
+  document.getElementById("decimal").value = decimal;
+  document.getElementById("binary").value = decimal.toString(2);
+  document.getElementById("octal").value = decimal.toString(8);
+}
+
+function clearFields() {
+  document.getElementById("binary").value = "";
+  document.getElementById("octal").value = "";
+  document.getElementById("hexadecimal").value = "";
+}
+
+</script>
+</body>
+<footer>
+  <img src="kianne.jpg" alt="Logo" style="width: 50px; height: auto;">
+  <p>&copy; 2024 Number System Converter. Created By Ortega.</p>
+</footer>
+</html>
